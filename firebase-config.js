@@ -3,7 +3,7 @@
 // 3) Copy your Firebase config object here.
 // 4) Set DEFAULT_NOTE_ID to the same secret/random ID you put in firestore.rules.
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCa-QBdHWEV3WUU0jlIPlYJYrWe-HAp5mA",
   authDomain: "hoang-cibc-note.firebaseapp.com",
   projectId: "hoang-cibc-note",
