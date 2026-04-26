@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /singleNotes/{noteId} {
+      // Replace this with the exact same random ID from firebase-config.js.
+      function isAllowedNote() {
+        return noteId == "REPLACE_WITH_LONG_RANDOM_NOTE_ID";
+      }
+
+      function validShape() {
+        return request.resource.data.keys().hasOnly([
+          "text",
+          "lastSavedAtMs",
+          "lock"
+        ]);
+      }
+
+      // Anyone with the link can read/update the single note.
+      // Listing all note documents is blocked.
+      allow get: if isAllowedNote();
+      allow list: if false;
+      allow create, update: if isAllowedNote() && validShape();
+      allow delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

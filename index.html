@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#111827" />
+  <title>One Shared Note</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <h1>One Shared Note</h1>
+        <p id="statusText" class="status muted">Starting…</p>
+      </div>
+      <div class="actions">
+        <button id="retryBtn" class="secondary" type="button">Retry</button>
+        <button id="copyLinkBtn" class="secondary" type="button">Copy link</button>
+        <button id="closeBtn" class="danger" type="button">Close note</button>
+      </div>
+    </header>
+
+    <section id="blockedPanel" class="blocked hidden" aria-live="polite">
+      <h2>Note is already open</h2>
+      <p id="blockedText">Another browser/device currently has the edit lock. Close it first, or wait for the lock to expire.</p>
+      <button id="retryBlockedBtn" type="button">Try again</button>
+    </section>
+
+    <section id="editorPanel" class="editor-panel hidden">
+      <textarea
+        id="noteInput"
+        spellcheck="true"
+        placeholder="Write here…"
+        aria-label="Shared note editor"
+      ></textarea>
+    </section>
+
+    <footer class="footer">
+      <span id="saveText">Not saved yet</span>
+      <span id="lockText">No lock</span>
+    </footer>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
