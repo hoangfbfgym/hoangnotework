@@ -3,15 +3,16 @@
 // 3) Copy your Firebase config object here.
 // 4) Set DEFAULT_NOTE_ID to the same secret/random ID you put in firestore.rules.
 
-export const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
-  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+const firebaseConfig = {
+  apiKey: "AIzaSyCa-QBdHWEV3WUU0jlIPlYJYrWe-HAp5mA",
+  authDomain: "hoang-cibc-note.firebaseapp.com",
+  projectId: "hoang-cibc-note",
+  storageBucket: "hoang-cibc-note.firebasestorage.app",
+  messagingSenderId: "766085528986",
+  appId: "1:766085528986:web:6246bd2bbea4bc32d30e23",
+  measurementId: "G-T85ZZN0Q3F"
 };
 
 // Make this long, random, and hard to guess.
 // Example: "note_9gKx7mPq3TzR6vN2aLhQ"
-export const DEFAULT_NOTE_ID = "REPLACE_WITH_LONG_RANDOM_NOTE_ID";
+export const DEFAULT_NOTE_ID = "hoang_note_1123";
